@@ -1,0 +1,47 @@
+/* Style the header */
+.header {
+  padding: 30px 40px;
+  color: #f1f1f1;
+  text-align: center;
+}
+
+/* Clear floats after the header */
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.header .action-buttons .btn {
+  margin: 25px 10px 10px 10px;
+  min-width: 150px;
+}
+
+/* Style the input */
+input {
+  margin: 0;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Style the "Add" button */
+.addBtn {
+  padding: 10px;
+  width: 25%;
+  background: #d9d9d9;
+  color: #555;
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+}
+
+.addBtn:hover {
+  background-color: #bbb;
+}
