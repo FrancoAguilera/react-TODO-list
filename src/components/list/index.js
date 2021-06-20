@@ -5,7 +5,7 @@ class TodoItemList extends React.Component {
   render() {
     return (
       <ul>
-        <li class="checked">Pay bills</li>
+        <li className="checked">Pay bills</li>
       </ul> 
     );
   }

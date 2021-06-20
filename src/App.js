@@ -1,6 +1,6 @@
 import './App.css';
-import TodoForm from './components/todo-form/'
-import TodoItemList from './components/todo-item/'
+import TodoForm from './components/form/'
+import TodoItemList from './components/list/'
 
 function App() {
   return (
