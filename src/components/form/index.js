@@ -13,11 +13,12 @@ const TodoForm = props => {
   const addTodo = () => {
 
     const item = {
+      id: new Date().getTime(),
       task: entryText.text,
       completed: false
     };
 
-    props.handleNewTodo((prevState, props) => {
+    props.handleNewTodo((prevState) => {
       return ([item, ...prevState])
     })
 
