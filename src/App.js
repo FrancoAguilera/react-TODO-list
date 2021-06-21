@@ -12,7 +12,7 @@ const App = () => {
     {
       id: '1624237244981',
       task: 'Do laundry',
-      completed: true
+      completed: false
     },
     {
       id: '1624237244126',
@@ -22,7 +22,7 @@ const App = () => {
     {
       id: '1624237246410',
       task: 'Buy groseries',
-      completed: true
+      completed: false
     }
   ])
 

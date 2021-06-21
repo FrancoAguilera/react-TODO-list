@@ -13,7 +13,9 @@ const TodoList = props => {
   const markCompleted = (itemId) => {
     props.handleNewTodo((prevState) => {
       const obj = [...prevState].find(item => item.id === itemId);
-      obj.completed = !obj.completed
+      if (obj) {
+        obj.completed = !obj.completed
+      }
       return [...prevState];
     });
   }
