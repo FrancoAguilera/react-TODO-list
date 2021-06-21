@@ -1,7 +1,8 @@
 import React from 'react';
 import './index.css';
 
-const TodoForm = () => {
+const TodoForm = props => {
+
 
   const textInput = React.useRef(); // Consultar
 
@@ -10,23 +11,33 @@ const TodoForm = () => {
   };
 
   const addTodo = () => {
-    alert(entryText.text);
+
+    const item = {
+      task: entryText.text,
+      completed: false
+    };
+
+    props.handleNewTodo((prevState, props) => {
+      return ([item, ...prevState])
+    })
+
+    // clear form imput
     textInput.current.value = '';
-  }
+  };
 
   const handleEnter = (e) => {
     if (e.which === 13 || e.keyCode === 13) {
       addTodo();
     }
+  };
 
-  }
   const handleChange = (e) => {
     entryText.text = e.target.value;
-  }
+  };
 
   const handleClick = (e) => {
     addTodo();
-  }
+  };
 
   return (
     <div className="header">
@@ -52,7 +63,7 @@ const Button = ({ handleClick, children }) => (
   <button
     type="button"
     className="add-btn btn btn-outline-success btn-lg"
-    onClick={ handleClick }> // Consultar guideline sobre JSX codestyle
+    onClick={ handleClick }>
     {children}
   </button>
 );

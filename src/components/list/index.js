@@ -1,14 +1,18 @@
 import React from 'react';
 import './index.css';
 
-class TodoItemList extends React.Component {
-  render() {
+const TodoList = props => {
+  const ListItems = () => props.todos.map((item, i) => {
     return (
-      <ul>
-        <li className="checked">Pay bills</li>
-      </ul> 
-    );
-  }
-}
+      <li key={ i } className={ item.completed ? 'checked' : '' }>{ item.task }</li>
+    )
+  });
 
-export default TodoItemList;
+  return (
+    <ul>
+      <ListItems />
+    </ul>
+  )
+};
+
+export default TodoList;
